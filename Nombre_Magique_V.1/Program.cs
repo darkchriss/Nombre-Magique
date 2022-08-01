@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Nombre_Magique_V._1
 {
@@ -23,13 +23,9 @@ namespace Nombre_Magique_V._1
                 int nombreUtilisateur = 0;
                 if (int.TryParse(résultat, out nombreUtilisateur))
                 { // La conversion s'est bien passé
-                    if (nombreUtilisateur < VAL_MIN)
+                    if (nombreUtilisateur < VAL_MIN ||nombreUtilisateur > VAL_MAX)
                     {
-                        Console.WriteLine("ERREUR : Vous devez saisir un nombre entre " + VAL_MIN + " et " + VAL_MAX);
-                    }
-                    else if (nombreUtilisateur > VAL_MAX)
-                    {
-                        Console.WriteLine("ERREUR : Vous devez saisir un nombre entre " + VAL_MIN + " et " + VAL_MAX);
+                        Console.WriteLine("ERREUR : Vous devez saisir un nombre compris entre " + VAL_MIN + " et " + VAL_MAX);
                     }
                     else
                     {
